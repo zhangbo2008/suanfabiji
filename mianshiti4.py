@@ -11,6 +11,12 @@
 最坏情况：O(n^2)
 空间复杂度：O(1)
 
+nums=[1,2,3,4]
+for i in range(len(nums)):
+    for j in range(i+1,len(nums)):
+        if nums[i]>nums[j]:
+          nums[i],nums[j]=nums[j],nums[i]
+
 
 选择排序（Selection Sort）
 
@@ -135,7 +141,11 @@ def best(rna):
             j = i + length
             if (rna[i] == 'A' and rna[j] == 'U') or (rna[i] == 'U' and rna[j] == 'A') or (rna[i] == 'G' and rna[j] == 'C') or (rna[i] == 'C' and rna[j] == 'G') or (rna[i] == 'G' and rna[j] == 'U') or (rna[i] == 'U' and rna[j] == 'G'):
                 dp[i][j] = dp[i + 1][j - 1] + 1
-                brackets[i][j] = '('+brackets[i+1][j-1]+')' #字符串的i和j匹配成功.
+                if j-i==1: #初始情况就直接写()
+                    brackets[i][j] ='()'
+                else: #进行递归合并.
+
+                    brackets[i][j] = '('+brackets[i+1][j-1]+')' #字符串的i和j匹配成功.
                 
 
             for k in range(i, j): #用k来把i,j分割成2个部分.

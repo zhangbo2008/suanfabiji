@@ -1,5 +1,5 @@
 class Solution:
-    def stoneGame(self, piles: List[int]) -> bool:
+    def stoneGame(self, piles) -> bool:
         n = len(piles)
 
         # 初始化一个n*n的矩阵 dp数组
@@ -36,3 +36,10 @@ class Solution:
         res = dp[0][n - 1]
 
         return res[0] - res[1] > 0
+
+
+
+print(3+4>>1)
+print(4>>1)
+print((3+4)>>1)
+print(3+(4>>1))
