@@ -1,3 +1,8 @@
+# 扩充了,一笔画问题, 倒水问题, 这些抖音游戏的解法.
+
+
+
+
 English version repo and Gitbook is on [english branch](https://github.com/labuladong/fucking-algorithm/tree/english). Just enjoy：)
 
 # labuladong 的算法小抄
